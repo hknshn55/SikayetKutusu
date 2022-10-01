@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<body>               -->
+    <div class="container" style="margin-top: 5%;">
+        <h1 class="text-center text-success"> Şikayet ve Önerilerinizi Belirtiniz...</h1>
+        <div class="row">
+            <div class="col-sm-4"> </div>
+            <div class="col-md-4">
+                <div class="col-sm-12">
+                    <div class="tab-content">
+                        <div id="home" class="tab-pane fade in active">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <form id="frm" method="post" asp-action="Index">
+                                <div class="form-group">
+                                    <label for="UserName">İsim</label>
+                                    <input type="text" class="form-control" name="FirstName">
+                                </div>
+                                <div class="form-group">
+                                    <label for="UserName">Soyisim</label>
+                                    <input type="text" class="form-control" name="LastName">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="UserName">Öneri ve Şikayet</label>
+                                    <textarea style="height:400px;" class="form-control" name="Description"></textarea>
+                                </div>
+                                <button onclick="Rst()" type="submit" class="btn btn-success">Gönder</button><span style="margin-left:40px;">&copy; 2022 - Salman Mühendislik</span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function Rst()
+    {
+        this.frm.reset();
+        alert("Şikayet ve Önerileriniz başarıyla iletildi.");
+    }
+</script>
